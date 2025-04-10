@@ -1,0 +1,12 @@
+body{
+    font-size: medium;
+    background-color:royalblue ;
+}
+
+@media(min-width: 769px){
+    body{
+        font-size: large;
+        background-color: lightblue;
+    }
+}
+
