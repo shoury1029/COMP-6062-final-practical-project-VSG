@@ -8,15 +8,16 @@
         <header>
 
         </header>
-        <main class="container">
-            <div>
-                <p> First Name: {{ firstName }} </p>
+        <main>
+            <div id="app">
+                <p > First Name: {{ userProfile.firstName }}</p>
                 <p> Last Name: {{ lastName }}</p>
-                <p> Full Name: (Methods): {{ fullName }}</p>
-
+                <p> Full Name: {{ fullName }}</p>
                 <button @click = "newRandomProfile"> get a new Random Profile</button>
-                
-
+            </div>
+            <div id="app">
+                <label for="city"> City </label>
+                <input type="text" id="city" placeholder="city">
             </div>
         </main>
         <footer>

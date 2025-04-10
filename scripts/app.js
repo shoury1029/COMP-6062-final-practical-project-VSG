@@ -1,21 +1,52 @@
 const app = Vue.createApp({
     data() {
         return {
-            firstName: '',
-            lastName: '',
-            age: null,
-            profilePhoto: null,
+            userProfile:{
+                firstName: 'Varun',
+                lastName: '',
+                age: 25,
+                profilePhoto: null
+            },
+            weatherModule: {
+                temperature: "4 °C",
+                wind_speed: "25 km/h",
+                weather_description: "Partly cloudy",
+                location: {
+                    city: "Toronto",
+                    region: "Ontario",
+                    country: "Canada",
+                    latitude: "43.667",
+                    longitude: "-79.417",
+                    population: "4612191"
+                }
+            }
         };
     },
-    methods: {
+    computed:  {
         fullName() {
-            return `${this.firstName} ${this.lastName}`;
+            return `${this.firstName}  ${this.lastName}`;
         },
     },    
-    computed: {
-        
+    methods: {
+        newRandomProfile() {
+            fetch('http://comp6062.liamstewart.ca/random0user-profile')
+            .then(response => {
+                if(response.ok) {
+                    return response.json();
+                }
+                else {
+                    console.log('Error. Try again');
+                }
+            })
+        },
+        getWeather(){
+            fetch('http://comp6062.liamstewart.ca/weather-information')
+
+        },
     },
 });
+    
+    
 app.mount('#app');
 
 /*
@@ -26,4 +57,18 @@ app.mount('#app');
     "age": 66,
     "profile_picture": "https://randomuser.me/api/portraits/men/88.jpg"
   }
-    */
+
+  {
+  "temperature": "4 °C",
+  "wind_speed": "25 km/h",
+  "weather_description": "Partly cloudy",
+  "location": {
+    "city": "Toronto",
+    "region": "Ontario",
+    "country": "Canada",
+    "latitude": "43.667",
+    "longitude": "-79.417",
+    "population": "4612191"
+  }
+}
+*/
