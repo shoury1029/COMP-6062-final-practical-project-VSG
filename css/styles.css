@@ -1,12 +1,120 @@
-body{
-    font-size: medium;
-    background-color:royalblue ;
-}
-
-@media(min-width: 769px){
-    body{
-        font-size: large;
-        background-color: lightblue;
+body {
+    background-color: #F9FAFB;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: #080808;
+  }
+  
+  header  {
+    background-color: #a13600;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  footer{
+    background-color: #661515;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  h1 {
+    margin: 0;
+    font-size: 26px;
+  }
+  
+  h2 {
+    color: #011a12;
+    margin-top: 0;
+    font-size: 20px;
+  }
+  
+  section {
+    background-color: white;
+    border: 1px solid #E5E7EB;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    color:#a13600;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #661515;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  button:hover {
+    background-color: #1a0707;
+  }
+  
+  img {
+    margin-top: 10px;
+    border-radius: 12px;
+    border: 2px solid #E5E7EB;
+    width: 150px;
+  }
+  .weather-location {
+    background-color: #f9fafa;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 15px;
+  }
+  
+  .weather-location h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .weather-location p {
+    margin: 6px 0;
+  }
+  
+  .weather-location p strong {
+    color: black;
+  }
+  
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 20px;
     }
-}
-
+  
+    h2 {
+      font-size: 18px;
+    }
+  
+    input,
+    button {
+      width: 100%;
+    }
+  
+    img {
+      width: 100px;
+    }
+  }
+  
